@@ -1,0 +1,35 @@
+<div class="pagina_lista_e_logo">
+    <div class="fade-container-principal">
+        <img src="assets/frente.jpg" alt="Imagem" class="moving-image-principal">
+    </div>
+    <div class="search" style="margin-top: -300px;">
+        <input class="form-input" type="text" [(ngModel)]="searchText" placeholder="Só digitar que vai aparecer meu parça!">
+      </div>
+    <!-- <div class="container-lista">
+        <app-lista-produtos></app-lista-produtos>
+    </div> -->
+    <!-- 
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+        <div fxFlex="50%" fxFlex.xs="100%">
+         
+        </div>
+      </div> -->
+      <div class="table-container my-component">  
+        
+          <div >
+            <table *ngIf="tableData" class="table">
+              <thead>
+                <tr>
+                  <th *ngFor="let header of tableHeaders">{{ header }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of filteredTableData">
+                  <td *ngFor="let cell of row">{{ cell }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+</div>
+ 

@@ -1,0 +1,23 @@
+<!-- <div>
+  <input type="file" (change)="onFileChange($event)" accept=".xlsx">
+</div> -->
+<div class="table-container">  
+    <div class="search">
+      <input class="form-input" type="text" [(ngModel)]="searchText" placeholder="Só digitar que vai aparecer meu parça!">
+    </div>
+    <div >
+      <table *ngIf="tableData" class="table">
+        <thead>
+          <tr>
+            <th *ngFor="let header of tableHeaders">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of filteredTableData">
+            <td *ngFor="let cell of row">{{ cell }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

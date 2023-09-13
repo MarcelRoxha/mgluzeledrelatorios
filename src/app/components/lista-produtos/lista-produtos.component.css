@@ -1,0 +1,121 @@
+/* Defina uma altura máxima para a tabela */
+.table-container {
+    max-height: 400px; /* Altura máxima desejada para a tabela */
+    overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
+  }
+  
+  /* Estilos adicionais para a tabela, ajuste conforme necessário */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .form-input {
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos responsivos para tabelas menores */
+  @media screen and (max-width: 768px) {
+    .table-container {
+      max-height: 150px; /* Reduza a altura máxima para telas menores */
+      max-width: 325px;
+      background-color: rgb(83, 83, 87);
+    }
+    .table{
+      background-color: palegreen;
+    }
+  
+    /* Ajuste o tamanho da fonte e o espaçamento para tabelas menores, se necessário */
+    .table th,
+    .table td {
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+  
+  /* my-component.component.css */
+  
+  /* Estilizando a área de visualização do scroll */
+  .my-component {
+    margin-top: 300px;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  /* Estilizando a barra de rolagem horizontal */
+  .my-component::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .my-component::-webkit-scrollbar-thumb {
+    background-color: #888;
+  }
+  
+  .my-component::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  /* Estilizando a barra de rolagem vertical */
+  .my-component::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  .my-component::-webkit-scrollbar-track-piece {
+    background-color: #ddd;
+  }
+  
+  /* my-component.component.css */
+  
+  /* Estilos para a tabela */
+  /* my-component.component.css */
+  
+  /* Estilos para a tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f2f2f2; /* Fundo cinza */
+    
+    /* box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); Sombra vermelha */
+  }
+  
+  /* Estilos para o cabeçalho da tabela */
+  thead th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Estilos para o corpo da tabela */
+  tbody {
+    max-height: 300px; /* Altura máxima da tabela antes de rolar */
+    overflow-y: auto;
+  }
+  
+  /* Estilos para as células da tabela */
+  td {
+    border: 20px solid #ddd;
+    padding: 8px;
+  }
+  
+  
+  

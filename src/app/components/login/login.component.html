@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="fade-container">
+        <img src="assets/frente.jpg" alt="Imagem" class="moving-image">
+    </div>
+    <div class="form-container">
+        <form>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Email" [(ngModel)]="email"
+                required/>
+            <input type="password" id="senha" name="senha" class="form-input" placeholder="Senha" [(ngModel)]="senha"
+                required/>
+            <div class="botao_acesso">
+                <button type="button" class="form-button" (click)="login()">ACESSAR</button>
+            </div>
+        </form>
+    </div>
+</div>

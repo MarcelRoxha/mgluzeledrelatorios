@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mgluzeled-118a9": {
+      "hosting": {
+        "mgluzeledrelatorios": [
+          "mgluzeled-118a9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mgluzeled-118a9"
+  }
+}

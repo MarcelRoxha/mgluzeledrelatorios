@@ -35,7 +35,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -91,8 +91,18 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "mgluzeledrelatorios:build:production"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "54dd8b36-bd73-4ae2-a850-541665ba3574"
   }
 }

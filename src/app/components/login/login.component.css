@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1D1C1A;
+}
+
+.fade-container {
+    text-align: center;
+}
+
+.moving-image {
+    max-width: 50%;
+    animation: fadeIn 2s ease-in-out;
+
+}
+
+.login-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    display: inline;
+    /* Inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+    /* Animação para aparecer devagar */
+}
+
+/* Estilo para os campos de entrada */
+.form-input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão */
+.form-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.botao_acesso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.form-button:hover {
+    background-color: #0056b3;
+}
+.rotape{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes moveAndResize {
+    50% {
+        transform: translateX(10) scale(50);
+    }
+
+    100% {
+        transform: translateX(-100%) translateY(-50%) scale(1);
+    }
+}
+
+/* Animação para aparecer devagar */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
