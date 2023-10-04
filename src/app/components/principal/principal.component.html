@@ -1,22 +1,58 @@
 <div class="pagina_lista_e_logo">
-    <div class="fade-container-principal">
-        <img src="assets/frente.jpg" alt="Imagem" class="moving-image-principal">
-    </div>
-    <div class="search" style="margin-top: -300px;">
-        <input class="form-input" type="text" [(ngModel)]="searchText" placeholder="Só digitar que vai aparecer meu parça!">
+  <div class="fade-container-principal">
+    <img src="assets/frente.jpg" alt="Imagem" class="moving-image-principal">
+  </div>
+  <div class="search" style="margin-top: -300px;">
+    <input class="form-input" type="text" [(ngModel)]="termoDePesquisa" (input)="filtrarDados()" placeholder="Pesquisar...">
+    <!-- <input class="form-input" type="text" [(ngModel)]="searchText" onfocus="customFilter(searchText)" placeholder="Pesquisar..."> -->
+    <!-- <input matInput name="search" [(ngModel)]="searchText" placeholder="Pesquisar..."> -->
+    <!-- <button (click)="onFileChange($event)">Deploy planilha</button> -->
+    <!-- <button (click)="onFileChange($event)">Deploy planilha</button> -->
+    <!-- <input type="file" placeholder="Planilha" (change)="onFileSelected($event)" id="xlsxFileInput"> -->
+    <!-- <ul>
+          <li *ngFor="let item of produtosGeral">
+            {{item.categotia}}
+            {{item.produto}}
+            {{item.cod}}
+            {{item.custo}}
+            {{item.forncedor}}
+          </li>
+        </ul>  -->
+    <div class="table-container my-component">
+      <div>
+        <table class="table table-container">
+          <thead>
+            <tr>
+              <th>CODIGO</th>
+              <th>CATEGORIA</th>
+              <th>PRODUTO</th>
+              <th>CUSTO</th>
+              <th>FORNECEDOR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of tableData">
+              <td>{{item.cod}}</td>
+              <td>{{item.categoria}}</td>
+              <td>{{item.produto}}</td>
+              <td>{{item.custo}}</td>
+              <td>{{item.fornecedor}}</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
-    <!-- <div class="container-lista">
-        <app-lista-produtos></app-lista-produtos>
-    </div> -->
-    <!-- 
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
-        <div fxFlex="50%" fxFlex.xs="100%">
-         
-        </div>
-      </div> -->
-      <div class="table-container my-component">  
+
+      <!-- </div> -->
+      <div class="produtos">
+
+      </div>
+
+    </div>
+
+    <!-- <div class="table-container my-component">  
         
-          <div >
+          <div id="listaProdutos" name="listaProdutos">
             <table *ngIf="tableData" class="table">
               <thead>
                 <tr>
@@ -30,6 +66,5 @@
               </tbody>
             </table>
           </div>
-      </div>
-</div>
- 
+      </div> -->
+  </div>

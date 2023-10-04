@@ -1,11 +1,23 @@
-import { Injectable, inject, OnInit } from '@angular/core';
+import { Injectable, inject, OnInit, Inject } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Firestore } from '@angular/fire/firestore'
+import { Observable } from 'rxjs';
+import * as XLSX from 'xlsx';
+import { Produtos } from '../components/principal/principal.component';
+import { ref } from '@angular/fire/database';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-  constructor(private afAuth: AngularFireAuth) {
+
+  produtos?: Observable<Produtos[]>;
+  
+  
+  
+  constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore) {
   }
   ngOnInit(): void {
     
@@ -15,7 +27,9 @@ export class ServiceService {
     return this.afAuth.signInWithEmailAndPassword(email, password);
   }
 
-  // logout() {
-  //   return this.afAuth.signOut();
-  // }
+  getDados() { 
+    return this.firestore.collection('PRODUTOS').valueChanges();
+    
+    
+  }
 }

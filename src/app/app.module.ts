@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -14,13 +15,15 @@ import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListaProdutosComponent} from './components/lista-produtos/lista-produtos.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     LoginComponent,
-    ListaProdutosComponent
+    ListaProdutosComponent,
+    FilterPipe
    
   ],
   imports: [
@@ -34,7 +37,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFirestoreModule
    
   ],
   providers: [AngularFireAuth],
